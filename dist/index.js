@@ -73,7 +73,7 @@ function sendLogs(workspaceId, sharedKey, body) {
             headers: {
                 Authorization: authorization,
                 'Content-Type': contentType,
-                'Log-Type': 'GithubWorkflowLogs',
+                'Log-Type': 'GithubWorkflowLogsTest',
                 'x-ms-date': logDate
             }
         });
@@ -214,10 +214,12 @@ function run() {
             const githubToken = core.getInput('github-token', { required: true });
             const componentId = core.getInput('component-id', { required: true });
             const repo = core.getInput('repo', { required: true });
+            const sha = core.getInput('sha', { required: true });
             const jsonBody = {
                 runId: runId,
                 componentId: componentId,
                 repo: repo,
+                sha: sha,
                 logs: yield getLogs_1.getWorkflowLogs(repo, githubToken, runId)
             };
             core.debug(`input json-body:'${jsonBody}'`);
@@ -229,7 +231,7 @@ function run() {
     });
 }
 exports.run = run;
-// run()
+run();
 
 
 /***/ }),

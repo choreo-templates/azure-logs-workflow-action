@@ -1,6 +1,6 @@
 import * as core from '@actions/core'
 import * as azureMonitor from './azureMonitor'
-import { getWorkflowLogs } from './getLogs'
+import {getWorkflowLogs} from './getLogs'
 
 export async function run(): Promise<void> {
   try {
@@ -8,12 +8,12 @@ export async function run(): Promise<void> {
     const customerId: string = core.getInput('azure-customer-id', {
       required: true
     })
-    const sharedKey: string = core.getInput('shared-key', { required: true })
-    const runId: string = core.getInput('run-id', { required: true })
-    const githubToken: string = core.getInput('github-token', { required: true })
-    const componentId: string = core.getInput('component-id', { required: true })
-    const repo: string = core.getInput('repo', { required: true })
-    const sha: string = core.getInput('sha', { required: true })
+    const sharedKey: string = core.getInput('shared-key', {required: true})
+    const runId: string = core.getInput('run-id', {required: true})
+    const githubToken: string = core.getInput('github-token', {required: true})
+    const componentId: string = core.getInput('component-id', {required: true})
+    const repo: string = core.getInput('repo', {required: true})
+    const sha: string = core.getInput('sha', {required: true})
 
     const jsonBody = {
       runId: runId,
