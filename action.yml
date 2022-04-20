@@ -1,0 +1,34 @@
+name: 'Azure Logs for Github Action Workflows'
+description: 'Send Github Action Workflow logs to Azure Logs Analytics'
+author: 'hoisjp'
+inputs:
+  shared-key:
+    required: true
+    description: "Use either the primary or the secondary Connected Sources client authentication key"
+    default: "N/A"
+  azure-customer-id:
+    required: true
+    description: "Customer ID to your Log Analytics workspace ID"
+    default: "N/A"
+  github-token:
+    required: true
+    description: "Github PAT"
+    default: "N/A"
+  component-id:
+    required: true
+    description: "Choreo component Id"
+    default: "N/A"
+  run-id:
+    required: true
+    description: "Run ID of the workflow"
+    default: "N/A"
+  repo:
+    required: true
+    description: "Value of $GITHUB_REPOSITORY"
+    default: "N/A"
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'monitor'
+  color: 'blue'

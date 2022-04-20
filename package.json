@@ -1,0 +1,52 @@
+{
+  "name": "azure-logs-action",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Send Github Action Workflow logs to Azure Logs Analytics",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
+    "lint": "eslint src/**/*.ts",
+    "package": "ncc build --source-map --license licenses.txt",
+    "test": "jest",
+    "all": "npm run build && npm run format && npm run package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/actions/typescript-action.git"
+  },
+  "keywords": [
+    "actions",
+    "node",
+    "setup"
+  ],
+  "author": "hoisjp",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.4.0",
+    "@actions/github": "^5.0.0",
+    "@actions/http-client": "^1.0.11",
+    "@octokit/rest": "^18.12.0",
+    "crypto-js": "^4.0.0",
+    "jszip": "^3.9.1"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.0.2",
+    "@types/jest": "^26.0.24",
+    "@types/js-yaml": "^4.0.2",
+    "@types/node": "^16.0.1",
+    "@typescript-eslint/parser": "^4.8.1",
+    "@vercel/ncc": "^0.28.6",
+    "eslint": "^7.17.0",
+    "eslint-plugin-github": "^4.1.3",
+    "eslint-plugin-jest": "^24.3.6",
+    "jest": "^27.0.6",
+    "jest-circus": "^27.0.6",
+    "js-yaml": "^4.1.0",
+    "prettier": "2.3.2",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.1.3"
+  }
+}
