@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Run action
-      uses: choreo-templates/azure-log-analytics-on-gh-workflow@master
+      uses: choreo-templates/azure-logs-workflow-action@v1
       with:
         shared-key: <<Use either the primary or the secondary Connected Sources client authentication key>>
         azure-customer-id: <<Customer ID to your Log Analytics workspace ID>>
