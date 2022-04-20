@@ -26,6 +26,10 @@ inputs:
     required: true
     description: "Value of $GITHUB_REPOSITORY"
     default: "N/A"
+  sha:
+    required: true
+    description: "Commit sha"
+    default: "N/A"
 runs:
   using: 'node12'
   main: 'dist/index.js'

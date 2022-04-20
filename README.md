@@ -21,6 +21,7 @@ jobs:
         component-id: <<Choreo component Id>>
         run-id: <<Run ID of the workflow>>
         repo: <<Value of $GITHUB_REPOSITORY>>
+        sha: <<Commit sha>>
         
 ```
 
@@ -34,3 +35,4 @@ jobs:
 | `component-id` _(required)_  | mandatory input  |
 | `run-id` _(required)_  | mandatory input  |
 | `repo` _(required)_  | mandatory input  |
+| `sha` _(required)_  | mandatory input  |
